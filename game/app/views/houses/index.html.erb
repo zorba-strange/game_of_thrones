@@ -1,0 +1,9 @@
+<h1 class="h1_titles">The Great Houses</h1>
+<div class="all_house_wrapper">
+  <% @houses.each do |house| %>
+    <div class="house_wrapper">
+      <%= link_to house.name, house %> 
+      <img class="house_image" src="<%= house.photo_url %>">
+    </div>
+  <% end %>
+</div>

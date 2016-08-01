@@ -1,0 +1,15 @@
+<h1>Show</h1>
+<h3><%= link_to "Eliminate this House", house_path(@house.id),
+  method: :delete,
+  data: {confirm: 'Are you sure?' }%></h3>
+
+<div class="house_name_show">
+  <h1><%= @house.name %></h1>
+  <img class="house_image" src="<%= @house.photo_url %>">
+</div>
+<% @character.each do |char| %>
+  <h2><%= char.name %></h2>
+  <img class="char_image" src="<%= char.photo_url %>">
+<% end %>
+
+
