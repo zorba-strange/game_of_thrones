@@ -15,25 +15,47 @@
  */
 
 body {
-  margin: 0 auto;
+  margin: 1em auto;
   max-width: 50em;
   background-image: url("http://i.imgur.com/ibeMHc9.jpg");
   background-size: fill;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   color: rgb(0, 153, 255);
 }
+.title_show, .image_right {
+  display: inline-block;
+}
 
-.h1_titles {
-  border-bottom: 2px solid black;
+
+.image_right {
+  width: 15%;
+  height: 15%;
+  text-align: right;
+}
+
+.title {
+  text-align: center;
+  font-size: 55px;
+  border-bottom: 2px solid rgb(0, 153, 255);
 }
 
 .house_wrapper {
+
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
   width: 25em;
+  border-bottom: 1px solid black;
   align-items: center;
-  writing-mode: vertical-lr;
+}
+
+a {
+  color: rgb(255, 51, 204);
+}
+
+a:hover {
+  color: rgb(128, 0, 96);
+  text-decoration: none;
 }
 
 .dropdown {
