@@ -16,17 +16,66 @@
 
 body {
   margin: 1em auto;
-  max-width: 50em;
+  max-width: 60em;
   background-image: url("http://i.imgur.com/ibeMHc9.jpg");
   background-size: fill;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: rgb(0, 153, 255);
 }
-.title_show, .image_right {
-  display: inline-block;
+.home_link{
+  position: fixed;
 }
 
+.char_name{
+  color: rgb(0, 153, 255);
+}
+
+.flash {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.change_link {
+  margin: 0 4em;
+  position: fixed;
+}
+.title_show {
+  text-align: center;
+}
+
+.new_update_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.border_box {
+  border: 2px solid rgb(0, 153, 255);
+  padding: 1em;
+  margin: 0 auto;
+  display: inline;
+}
+
+  
+.char_show {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.float_left{
+  float: right;
+}
+
+.char_image {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width: 25em;
+}
 
 .image_right {
   width: 15%;
@@ -34,14 +83,18 @@ body {
   text-align: right;
 }
 
+.change_title {
+  margin: 1em auto;
+  text-align: center;
+  border-bottom: 2px solid rgb(255, 51, 204);
+}
 .title {
   text-align: center;
   font-size: 55px;
-  border-bottom: 2px solid rgb(0, 153, 255);
+  border-bottom: 2px solid rgb(255, 51, 204);
 }
 
 .house_wrapper {
-
   display: flex;
   flex-direction: column;
   width: 25em;

@@ -21,6 +21,20 @@ class HousesController < ApplicationController
     end
   end
 
+  def update
+    @house = House.find(params[:id])
+    @house.update(house_params)
+    if @house.save
+      redirect_to @house, notice: "#{@house.name} was updated."
+    else
+      render :edit
+    end
+  end
+
+  def edit
+    @house = House.find(params[:id])
+  end
+
   def destroy
     @house = House.find(params[:id])
     @house.destroy

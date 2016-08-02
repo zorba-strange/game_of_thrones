@@ -1,15 +1,17 @@
-<h3><%= link_to "Eliminate This House", house_path(@house.id),
-  method: :delete,
-  data: {confirm: "Are You Sure?"}%></h3>
-
-
 <div class="title_wrapper">
-   <h1 class="title title_show"><%= @house.name %></h1>
-  <img class="image_right" src="<%= @house.photo_url %>">
+  <h1 class="title title_show"><%= @house.name %></h1>
+  <%# <img class="image_right" src="<%= @house.photo_url %1>"> %>
+</div>
+<div class="new_update_wrapper">
+  <h3 class="border_box"><%= link_to "Eliminate", house_path(@house.id),
+    method: :delete,
+    data: {confirm: "Are You Sure?"}%></h3>
+  <h3 class="border_box"><%= link_to "Add Family Member", new_character_path %></h3>
+  <h3 class="border_box"><%= link_to "Update", edit_house_path(@house.id) %></h3>
 </div>
 <% @character.each do |char| %>
-  <h2><%= char.name %></h2>
-  <img class="char_image" src="<%= char.photo_url %>">
+  <div class="char_image">
+    <h2 class="char_name"><%=link_to char.name, character_path(char.id), :class=>"char_name" %></h2>
+    <img src="<%= char.photo_url %>">
+  </div>
 <% end %>
-
-

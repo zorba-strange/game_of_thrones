@@ -1,0 +1,11 @@
+<h1 class="title"><%= @character.name %></h1>
+<div class="char_show">
+  <h3 class="border_box"><%= link_to "KILL!", character_path(@character.id),
+    method: :delete,
+    data: {confirm: "Are You Sure?"}%></h3>
+  <img src="<%= @character.photo_url %>">
+  <h3 class="border_box float_left"><%= link_to "Update", edit_character_path(@character.id) %></h3>
+
+</div>
+
+
